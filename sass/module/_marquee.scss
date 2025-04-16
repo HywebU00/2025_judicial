@@ -1,0 +1,77 @@
+.marquee {
+  .swiperBox {
+    margin: 1em 0;
+    list-style: none;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    background: #02B4A5;
+    border-radius: 30px;
+    text-align: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @media (max-width: 991px) {
+      margin: 1.5em 0em;
+    }
+    .swiper {
+      height: 40px;
+    }
+    .marquee-arrow {
+      padding: 0;
+      position: absolute;
+      cursor: pointer;
+      right: 20px;
+      z-index: 9;
+      transform: rotate(90deg);
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      &::before {
+        content: '';
+        width: 10px;
+        height: 20px;
+        display: block;
+        background: url('../vendor/swiper/ar_w.svg') center no-repeat;
+        background-size: 8px 12px;
+      }
+      &.prevSlider {
+        top: 9px;
+      }
+      &.nextSlider {
+        bottom: 9px;
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+      &.marquee-arrow-disabled {
+        opacity: 0.3;
+      }
+    }
+    &:hover{
+      background: #ddd;
+      a{
+        color: #222;
+      }
+    }
+  }
+  a {
+    display: block;
+    line-height: 50px;
+    margin-right: 3em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

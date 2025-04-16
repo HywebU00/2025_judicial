@@ -1,0 +1,486 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: #{$remFontSize}px;
+  scroll-behavior: smooth;
+
+  // --變更為全站
+  &.smallSize {
+    font-size: 0.938em;
+  }
+
+  &.largeSize {
+    font-size: 1.125em;
+  }
+}
+
+body {
+  &.noscroll {
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  // background: #ddd;
+  // 啞鈴、大背景、漸層色
+  background:
+    url(../images/bg-r1.png) right bottom no-repeat,
+    url(../images/bg.png) 50% top no-repeat,
+    linear-gradient(180deg, #2176BD 0%, #0F9FD5 72%, #01A592 100%);
+  background-size: 900px 415px, auto, cover;
+}
+
+.row {
+  @include makeRow();
+
+  & > div {
+    box-sizing: border-box;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+
+  @include screen('tablet') {
+    // background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  margin: 0 auto;
+  width: $containerMax; //請看_variable.scss
+  position: relative;
+  @include containerFixed;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.main {
+  position: relative;
+  margin: 0 auto 2em;
+
+  $rightSide_W: 250px; // 右側邊欄寬度
+  $menu_w: 260px;      // 選單欄寬度
+  $fix_w: 1.8em;       // 修正內距
+  .flexible:has(.col:first-child + .col._rightSide){
+    // 兩個 col 都存在時
+    // .stage 寬度 = container最大寬 - 右側邊欄寬度 - 選單欄寬度 - 修正內距
+    .stage{
+      // background: green;
+      max-width: calc($containerMax - $rightSide_W - $menu_w - $fix_w);
+    }
+  }
+  .flexible{
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 90vh;
+    width: 100%;
+
+    .col{
+      display: flex;
+      flex-wrap: nowrap;
+      &:first-child{
+        // 左欄：menu + 主要內容區
+        flex: 1 1 auto;
+        .menu{
+          flex: 0 0 $menu_w;
+          background: #F2F7FA;
+          border-radius: 20px 0 0 20px;
+
+          position: relative;
+          z-index: 1;
+          &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 30px;
+            height: 100%;
+            background: #F2F7FA;
+            right: -20px;
+            top: 0;
+          }
+        }
+        .stage{
+          // 主要內容區
+          flex: 1 1 auto;
+          max-width: calc($containerMax - $menu_w - $fix_w); // container最大寬 - 選單欄寬度 - 修正內距
+          background: #fff;
+          box-shadow: 0px 8px 24px 0px #04284540;
+          border-radius: 15px;
+          padding: 2.25em 2em;
+
+          position: relative;
+          z-index: 2;
+        }
+      }
+      &._rightSide{
+        // 右欄，可隱藏
+        flex: 0 0 $rightSide_W;
+
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5em;
+        ul.links{
+          @include liReset;
+          backdrop-filter: blur(24px);
+          box-shadow: 0px 8px 24px 0px #04284540;
+          background: #FFFFFFD9;
+          padding: 20px 15px;
+          border-radius: 15px;
+          a{
+            display: flex;
+            padding: auto;
+            border-radius: 15px;
+            color: #303030;
+            background: #fff;
+            padding: .8em 1em;
+            margin: 5px 0;
+            transition: .3s ease;
+            gap: 10px;
+            img{
+              width: 22px;
+              height: 22px;
+            }
+            &:hover{
+              color: #fff;
+              background: linear-gradient(270deg, #358ED8 0%, #1D69A7 93%);
+              img{
+                filter: brightness(0) invert(1); // 變成白色
+              }
+            }
+          }
+        }
+        .lists{
+          margin-top: 1.75em;
+          border-radius: 15px;
+          box-shadow: 0px 8px 24px 0px #04284540;
+          background: #fff;
+          overflow: hidden;
+          .title{
+            background: linear-gradient(90deg, #0C9186 0%, rgba(12, 145, 134, 0.7) 100%);
+            padding: 15px 18px;
+            color: #fff;
+            font-size: 1.125em;
+            letter-spacing: 1px;
+            display: flex;
+            gap: 12px;
+            img{
+              width: 22px;
+              height: 22px;
+            }
+          }
+          ul{
+            @include liReset;
+            padding: 15px 18px;
+            li{
+              border-bottom: 1px dotted #ddd;
+            }
+            a{
+              display: block;
+              color: #404040;
+              padding: 10px 0;
+              line-height: 1.4;
+              &:hover{
+                color: #1D69A7;
+              }
+            }
+          }
+          .btnGrp{
+            margin: -.5em 15px 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @include screen('tablet') {
+    padding-top: 60px;
+    .flexible:has(.col:first-child + .col._rightSide),
+    .flexible .col:first-child{
+      .stage{
+        max-width: calc(100vw - 2em);
+      }
+    }
+    .flexible{
+      flex-wrap: wrap;
+      .col{
+        flex: 1 1 100%;
+        &._rightSide{
+          flex: 1 1 100%;
+          padding-left: 0;
+          margin-top: 20px;
+          gap: 20px;
+          ul.links{
+
+          }
+          .lists{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 可先設定一個中央區塊最大寬，限制accessKey對齊
+  h2 {
+    line-height: 1.25em;
+  }
+}
+
+// 常用搜尋
+.searchPanel{
+  padding: 5px 0;
+  fieldset{
+    margin: 1em 0;
+    padding-bottom: 1em;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    legend{
+      margin: 0;
+      padding: 0;
+      line-height: 2.25;
+      font-size: 1.35em;
+      font-weight: bold;
+    }
+    button{
+      position: absolute;
+      right: 0;
+      top: -50px;
+      z-index: 1;
+      &._switch{
+        font-size: 95%;
+        color: #fff;
+        padding: 0.4em 1.25em 0.4em 2.5em;
+        border-radius: 30px;
+        background: url(../images/icon_add.svg) 14px 50% no-repeat #666;
+        background-size: 24px;
+        &.act{
+          background: url(../images/icon_remove.svg) 14px 50% no-repeat #348CD6;
+          background-size: 24px;
+        }
+      }
+    }
+  }
+  .flexForm{
+    margin: 0;
+    &.formInline{
+      input[type=text]{
+        flex: 1 1 auto;
+      }
+    }
+    label{
+      line-height: 2.25;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+  .box_1st{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 6px;
+    padding-top: .5em;
+  }
+  .box_2rd{
+    flex: 1 1 24%;
+    max-width: 24%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 0;
+
+    > span{
+      // label wrap
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    label{
+      margin: 0;
+      padding: 0 .3em;
+      // white-space:nowrap;
+      font-weight: bold;
+      span{
+        display: inline-block;
+        background: #fff;
+        color: darken($colorPrimary, 5);
+
+        // width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        text-align: center;
+        margin-left: 4px;
+        padding: 2px 8px;
+        font-size: 90%;
+        letter-spacing: 2px;
+
+        &.checked{
+          background: darken($colorPrimary, 5);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .box_3rd{
+    background: #f1f1f1;
+    border-radius: 6px;
+    padding: .5em .5em .5em 1.5em;
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // gap: 6px;
+    > div{
+      display: flex;
+      align-items: flex-start;
+      padding: 0;
+      input[type=checkbox], 
+      input[type=radio]{
+        min-width: 16px;
+      }
+      label{
+        margin: .1em 0;
+        padding: 0;
+        font-weight: normal;
+      }
+    }
+    // 預設隱藏
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+  @include screen('tablet') {
+    .box_2rd{
+      flex: 1 1 49%;
+      max-width: 49%;
+    }
+  }
+  @include screen('mobile') {
+    .box_2rd{
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}
+$popHight: 90vh;
+.popup{
+  position: fixed;
+  width: 100%;
+  height: $popHight;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(10px);
+  z-index: 99999999;
+  top: 100%;
+  padding: 80px 1em 0;
+  h3{
+    color: #fff;
+    line-height: 2.25;
+    font-size: 1.35em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+  }
+  .btn{
+    position: absolute;
+    margin: 0;
+    &._switch{
+      right: 16px;
+      bottom: $popHight;
+      font-size: 95%;
+      color: #fff;
+      padding: .65em 1.25em .65em 2.5em;
+      border-color: transparent;
+      border-radius: 8px 8px 0 0;
+      // background: url(../images/icon_add.svg) 14px 50% no-repeat rgba(0,0,0,.85);
+      background: url(../images/icon_add.svg) 14px 50% no-repeat rgba(0,0,0,.85);
+      background-size: 24px;
+      &.act{
+        background: url(../images/icon_remove.svg) 14px 50% no-repeat rgba(0,0,0,.85);
+        background-size: 24px;
+      }
+    }
+  }
+  &._default{
+    display: none; // 初始預設 隱藏
+  }
+  &._show{
+    // 按下『查詢』之後
+    display: block;
+    bottom: 0;
+    top: inherit;
+  }
+}
+.iframeBox{
+  background: #f4f4f4;
+  padding: 1em;
+  border-radius: 10px;
+  height: 100%;
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerPage ClassName
+.innerPage {
+  & > .container {
+    padding-top: 1em;
+    @include gutter(); //gutter 代表左右要留白
+    // display: flex;
+  }
+
+  .centerBlock {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .leftBlock {
+    flex: none;
+    flex-basis: 260px;
+    max-width: 260px;
+    margin-right: 40px;
+    align-self: flex-start;
+    position: sticky;
+    top: 50px;
+
+    &.hidden {
+      & + .centerBlock {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    & + .centerBlock {
+      flex: auto;
+      flex-basis: calc(100% - 300px);
+      max-width: calc(100% - 300px);
+    }
+
+    @include screen('tablet') {
+      display: none;
+
+      & + .centerBlock {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

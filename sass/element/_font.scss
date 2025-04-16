@@ -1,0 +1,228 @@
+// @mixin aSetting_nocolor($color: $colorWord, $noLine: none) {
+//   color: $color;
+//   text-decoration: $noLine;
+//   &:hover,
+//   &:focus-visible{
+//     color: $aHover;
+//     cursor: pointer;
+//   }
+// }
+body {
+  // font-size: 1em;
+  font-weight: normal;
+  color: $colorWord;
+  line-height: 1.45em;
+  font-family: $fontFamily;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  @include aSetting();
+}
+
+// kbd
+kbd {
+  background: #fff;
+  border-radius: 0.2em;
+  color: #555;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  font-size: 0.938em;
+  font-family: sans-serif;
+  margin-right: 0.4em;
+  margin-bottom: 0.1em;
+  vertical-align: middle;
+  border-top: 1px solid #bbb;
+  border-bottom: 3px solid #bbb;
+  border-left: 2px solid #bbb;
+  border-right: 2px solid #bbb;
+
+  ~ kbd {
+    margin-left: 0.4em;
+  }
+
+  kbd {
+    border: none;
+  }
+}
+
+.fontSize {
+  // display: flex;
+  // align-items: center;
+  // margin-right: 0.5em;
+
+  & > button,
+  & > button.disabled,
+  button[disabled] {
+    background: #1D69A7;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    span{
+      font-size: 0.75em;
+    }
+  }
+
+  & > button{
+    transition: .2s;
+    &:hover,
+    &.act{
+      // background: #eee;
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+    }
+  }
+
+  position: relative;
+  ul {
+    position: absolute;
+    left: 50%;
+    top: 105%;
+    transform: translateX(-50%);
+    @include liReset;
+    padding: .25em;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: none; // 隱藏
+    li {
+      font-size: 1em;
+      flex: 0 0 auto;
+      margin: 2px;
+      align-items: center;
+
+      button {
+        display: block;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 50%;
+        background: #fff;
+        border-color: #fff;
+        width: 32px;
+        height: 32px;
+        color: #333;
+        margin: 0;
+        padding: 0;
+
+        &.small {
+          font-size: 0.938em;
+        }
+
+        &.large {
+          font-size: 1.125em;
+        }
+
+        &:hover,
+        &:focus {
+          background: $aHover;
+          color: #fff;
+          box-shadow: none;
+        }
+      }
+
+      &.active {
+        button,
+        a {
+          background: $aHover;
+          color: #fff;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.show{
+      display: block;
+    }
+  }
+
+  @include screen('mobile') {
+    display: none;
+  }
+}
+
+// 無障礙文字大小切換
+// .fontSize {
+//   display: flex;
+//   align-items: center;
+//   margin-right: 0.5em;
+
+//   & > button,
+//   & > button.disabled,
+//   button[disabled] {
+//     font-size: 0.875em;
+//     color: #222;
+//     padding: 0;
+//     margin: 0;
+//     opacity: 1;
+//     background: none;
+//     border: none;
+//     text-align: left;
+//   }
+
+//   span {
+//     content: '字型大小：';
+//     display: block;
+//     font-size: 0.875em;
+//     margin-top: 4px;
+//   }
+
+//   ul {
+//     @include liReset;
+//     display: flex;
+//     flex: 0 0 6em;
+
+//     li {
+//       font-size: 1em;
+//       flex: 0 0 auto;
+//       margin: 2px;
+//       align-items: center;
+
+//       button {
+//         display: block;
+//         text-align: center;
+//         line-height: 32px;
+//         border-radius: 50%;
+//         background: #f1f1f1;
+//         width: 32px;
+//         height: 32px;
+//         color: #333;
+//         margin: 0;
+//         padding: 0;
+
+//         &.small {
+//           font-size: 0.938em;
+//         }
+
+//         &.large {
+//           font-size: 1.125em;
+//         }
+
+//         &:hover,
+//         &:focus {
+//           background: $aHover;
+//           color: #fff;
+//           box-shadow: none;
+//         }
+//       }
+
+//       &.active {
+
+//         button,
+//         a {
+//           background: $aHover;
+//           color: #fff;
+//           box-shadow: none;
+//         }
+//       }
+//     }
+//   }
+
+//   @include screen('mobile') {
+//     display: none;
+//   }
+// }

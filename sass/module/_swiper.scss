@@ -1,0 +1,309 @@
+:root {
+  --dotSize: 15px;
+}
+
+.mpSlider {
+  a {
+    display: block;
+  }
+
+  .caption {
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0 1em;
+    font-size: 1.25em;
+    color: #fff;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    @include textOverflow;
+    box-sizing: border-box;
+
+    @include screen('mobile') {
+      width: 100%;
+      height: 2em;
+      line-height: 2em;
+      left: 0;
+      padding: 0 1em;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.cpSlider {
+  padding: 1em 0;
+}
+
+.swiperBox {
+  position: relative;
+}
+
+.swiper {
+  img {
+    display: block;
+  }
+}
+
+.swiperDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  .swiper-pagination-bullet {
+    /* 點的顏色 */
+    background: #666;
+    opacity: 0.4;
+    width: var(--dotSize);
+    height: var(--dotSize);
+    border-radius: 50%;
+
+    // &:focus-visible,
+    &:hover {
+      opacity: 1;
+      /* 點hover的顏色 */
+      background: #21baff;
+    }
+
+    // &:focus-visible,
+    &:hover {
+      opacity: 1;
+      /* 點focus的顏色 */
+      background: #ff3e4d;
+      // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+    }
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+      /* 點 active 的顏色 */
+      background: $aHover;
+
+      &:hover {
+        /* 點 active  hover的顏色 */
+        background: #ff3e4d;
+      }
+
+      // &:focus-visible,
+      &:hover {
+        /* 點 active  focus的顏色 */
+        background: #ff3e4d;
+      }
+    }
+
+    &.noFonts {
+      font-size: 0;
+    }
+  }
+}
+
+.swiperArrow {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px 10px;
+  margin: 0;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  z-index: 9;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 30px;
+    display: block;
+    background: url('../vendor/swiper/ar.svg') center no-repeat;
+  }
+
+  &.prevSlider {
+    left: 0px;
+  }
+
+  &.nextSlider {
+    right: 0px;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.swiperArrow-disabled {
+    opacity: 0.3;
+  }
+}
+
+.cpSlider .swiper {
+  margin: 0 40px;
+  background: #fff;
+  overflow: hidden;
+
+  h3 {
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 1.2em;
+    border-bottom: 1px solid $colorPrimary;
+  }
+
+  .cpSlider {
+    @include gutter;
+  }
+
+  .imgContainer {
+    @include aspectRatio(4, 3);
+    overflow: hidden;
+  }
+
+  .caption {
+    padding: 0.5em;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    bottom: -2em;
+    left: 0;
+    font-size: 0.938em;
+    height: 2em;
+    line-height: 1;
+    width: 100%;
+    @include textOverflow;
+    transition: 0.3s ease-out;
+  }
+
+  a {
+    color: #555;
+    display: block;
+
+    // &:focus-visible,
+    &:hover {
+      .caption {
+        bottom: 0;
+      }
+    }
+  }
+
+  .swiperArrow {
+    padding: 0;
+  }
+}
+
+.sliderFor {
+  position: relative;
+}
+
+.navSlider {
+  position: relative;
+
+  .swiper-slide {
+    max-height: 180px;
+    position: relative;
+
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      background: rgba(#000, 0.8);
+      color: #fff;
+    }
+
+    a {
+      position: relative;
+      display: block;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.adSlider {
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.linkSlider {
+  padding: 1em 30px;
+  .swiperArrow{
+    padding: 15px 0;
+    &.prevSlider{
+      left: -30px;
+    }
+    &.nextSlider{
+      right: -30px;
+    }
+  }
+
+  .swiper-slide{
+    &:nth-child(4n+1) a{
+      background: #3B3F64;
+    }
+    &:nth-child(4n+2) a{
+      background: #0863A5;
+    }
+    &:nth-child(4n+3) a{
+      background: #AC2E7F;
+    }
+    &:nth-child(4n) a{
+      background: #088682;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      background: #222;
+      padding: 12px;
+      gap: 6px;
+      border-radius: 10px;
+      min-height: 60px;
+      color: #fff;
+      border: 1px solid transparent;
+      img{
+        flex: 0 0 32px;
+        width: 28px;
+        height: 28px;
+        width: 100%;
+        display: block;
+        object-fit: contain;
+      }
+      span{
+        font-size: 90%;
+        font-weight: bold;
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      &:hover{
+        background: #eee;
+        color: #222;
+        // border-color: $colorPrimary;
+        border-color: #bbb;
+        img{
+          filter: brightness(1) invert(1);
+        }
+      }
+    }
+  }
+}

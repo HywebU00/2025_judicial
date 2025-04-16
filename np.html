@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>np</title>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <button class="sidebarCtrlBtn" type="button" aria-expanded="false" aria-controls="mobileArea">側欄選單</button>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <h1>
+            <a href="index.html"><img src="images/logo.svg" alt="網站標題" /></a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="頁首功能列">
+            <!-- 新增div navList -->
+            <div class="navList">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">單一登入窗口</a></li>
+                <li><a href="#">差勤系統</a></li>
+                <li><a href="#">司法院内網</a></li>
+                <li><a href="#">司法院外網</a></li>
+              </ul>
+            </div>
+            <!-- fontSize -->
+            <div class="fontSize">
+              <button class="font-size-label" type="button" name="字型大小"><span>A</span>A</button>
+              <ul aria-labelledby="font-size-label">
+                <li><button type="button" class="smallSize">小</button></li>
+                <li><button type="button" class="mediumSize">中</button></li>
+                <li><button type="button" class="largeSize">大</button></li>
+              </ul>
+            </div>
+            <!-- userName -->
+            <div class="userName">
+              <button class="user-label" type="button">使用者名稱</button>
+              <ul>
+                <li><a href="#">登出</a></li>
+                <li><a href="#">按鈕1</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- navigation End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <main class="main">
+        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+        <div class="container">
+          <div class="flexible">
+            <div class="col">
+              <!-- 選單 -->
+              <nav class="menu mainMenu" role="navigation" aria-label="主選單">
+                <ul>
+                  <li><a href="http://www.google.com">1 第一層有連結</a></li>
+                  <li>
+                    <a href="#">2 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">3 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">4 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <!-- 主要內容區 -->
+              <section class="stage">
+                <!-- swiper -->
+                <div class="linkSlider">
+                  <div class="swiperBox">
+                    <button type="button" class="prevSlider swiperArrow"></button>
+                    <button type="button" class="nextSlider swiperArrow"></button>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明1" />
+                            <span>審判系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_2.png" class="contain" alt="圖片說明2" />
+                            <span>法學資訊檢索系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_3.png" class="contain" alt="圖片說明3" />
+                            <span>司法智識庫</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_4.png" class="contain" alt="圖片說明4" />
+                            <span>事實型量刑資訊系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明5" />
+                            <span>第五項</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明6" />
+                            <span>第六項假如字很多很多很多很多</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="cover" alt="圖片說明7" />
+                            <span>第七項</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 跑馬燈 -->
+                <div class="marquee">
+                  <div class="swiperBox">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="javascript:;">1因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">2因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">3因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">4因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- swiper 往上-->
+                    <button class="marquee-arrow prevSlider"></button>
+                    <!-- swiper 往下-->
+                    <button class="marquee-arrow nextSlider"></button>
+                  </div>
+                </div>
+                <!-- 路徑 -->
+                <nav aria-label="麵包屑" class="breadcrumb">
+                  <ul>
+                    <li>路徑：</li>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li aria-current="page">節點</li>
+                  </ul>
+                </nav>
+                <!-- 公佈欄 -->
+                <h2 class="title">節點標題</h2>
+                <!-- functionPanel -->
+                <div class="functionPanel">
+                  <!-- function功能區塊 -->
+                  <div class="function">
+                    <ul>
+                      <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                      <li class="print"><a href="#">友善列印</a></li>
+                      <li class="forward"><a href="#">轉寄友人</a></li>
+                    </ul>
+                  </div>
+                  <!-- 社群分享 -->
+                  <div class="share">
+                    <ul>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_x.svg" alt="twitter" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_threads.svg" alt="Threads" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- NP -->
+                <div class="explainblock">
+                  說明區塊
+                </div>
+                <section class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#"><span class="num">1</span>節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">2</span>節點2</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">3</span>節點3</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">4</span>節點4</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">5</span>節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">6</span>節點6</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">7</span>節點7</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">8</span>節點8</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">9</span>節點9</a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="num">10</span>節點10</a>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </div>
+            <div class="col _rightSide">
+              <ul class="links">
+                <li><a href="#"><img src="images/icon_links_1.svg" alt="">重要法規異動</a></li>
+                <li><a href="#"><img src="images/icon_links_2.svg" alt="">最新主管法規</a></li>
+                <li><a href="#"><img src="images/icon_links_3.svg" alt="">Google司法新聞</a></li>
+                <li><a href="#"><img src="images/icon_links_4.svg" alt="">法官人事專區</a></li>
+                <li><a href="#"><img src="images/icon_links_5.svg" alt="">問卷調查</a></li>
+              </ul>
+              <div class="lists">
+                <div class="title"><img src="images/icon_lists_1.svg" alt="">最新法官論壇</div>
+                <ul>
+                  <li><a href="#">Re: 越來越難看的法院前科紀錄表 (無法相信前科表的小法官)</a></li>
+                  <li><a href="#">Re: 終止借名登記後一定要法院判才能辦理登記嗎 (涼涼)</a></li>
+                  <li><a href="#">Re: 請讓書記官獲得應有的加班補休 (無償加班也不是每個法院都有的)</a></li>
+                  <li><a href="#">請讓書記官獲得應有的加班補休 (rickdom)</a></li>
+                  <li><a href="#">Re: 請考慮給書記官增加專業加給 (年輕人)</a></li>
+                </ul>
+                <div class="btnGrp _aLeft">
+                  <a href="#" class="btnMore">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <div class="footerInfo">
+            <ul class="footerLink">
+              <li><a href="javascript:;">司法院內網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+              <li><a href="javascript:;">司法院外網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+            </ul>
+            <p class="Copyright">法官資訊服務平台  版權所有   未經允許請勿轉載<br>網站相關問題請與所屬法院資訊處室聯繫</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- main js-->
+    <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+footer {
+  clear: both;
+  text-align: left;
+  font-size: 0.813em;
+  padding: 1em 0;
+
+  .container {
+    justify-content: space-between;
+    @include gutter;
+
+    & > div {
+      padding-bottom: 1em;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $colorPrimary;
+
+    // &:focus-visible,
+    &:hover {
+      color: darken($colorPrimary, 10);
+    }
+  }
+
+  .footerInfo {}
+
+  // 版權連結
+  .footerLink {
+    @include liReset();
+    clear: both;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    @include screen('mobile') {
+      flex-flow: row wrap;
+      padding: 0 4em;
+      margin-bottom: 20px;
+    }
+
+    li {
+      flex: 0 1 auto;
+      // margin: 0px 5px 5px 0px;
+
+      @include screen('mobile') {
+        flex: 1 1 25%;
+      }
+
+      a {
+        display: block;
+        padding: 0.25em 1em;
+        color: #fff;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        transition: 0.3s ease-out;
+        white-space: nowrap;
+
+        // &:focus-visible,
+        &:hover {
+          // background: darken($colorPrimary, 10);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  p {
+    line-height: 1.65em;
+  }
+}

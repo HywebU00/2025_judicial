@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lp</title>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <button class="sidebarCtrlBtn" type="button" aria-expanded="false" aria-controls="mobileArea">側欄選單</button>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <h1>
+            <a href="index.html"><img src="images/logo.svg" alt="網站標題" /></a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="頁首功能列">
+            <!-- 新增div navList -->
+            <div class="navList">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">單一登入窗口</a></li>
+                <li><a href="#">差勤系統</a></li>
+                <li><a href="#">司法院内網</a></li>
+                <li><a href="#">司法院外網</a></li>
+              </ul>
+            </div>
+            <!-- fontSize -->
+            <div class="fontSize">
+              <button class="font-size-label" type="button" name="字型大小"><span>A</span>A</button>
+              <ul aria-labelledby="font-size-label">
+                <li><button type="button" class="smallSize">小</button></li>
+                <li><button type="button" class="mediumSize">中</button></li>
+                <li><button type="button" class="largeSize">大</button></li>
+              </ul>
+            </div>
+            <!-- userName -->
+            <div class="userName">
+              <button class="user-label" type="button">使用者名稱</button>
+              <ul>
+                <li><a href="#">登出</a></li>
+                <li><a href="#">按鈕1</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- navigation End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <main class="main">
+        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+        <div class="container">
+          <div class="flexible">
+            <div class="col">
+              <!-- 選單 -->
+              <nav class="menu mainMenu" role="navigation" aria-label="主選單">
+                <ul>
+                  <li><a href="http://www.google.com">1 第一層有連結</a></li>
+                  <li>
+                    <a href="#">2 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">3 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">4 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <!-- 主要內容區 -->
+              <section class="stage">
+                <!-- swiper -->
+                <div class="linkSlider">
+                  <div class="swiperBox">
+                    <button type="button" class="prevSlider swiperArrow"></button>
+                    <button type="button" class="nextSlider swiperArrow"></button>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明1" />
+                            <span>審判系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_2.png" class="contain" alt="圖片說明2" />
+                            <span>法學資訊檢索系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_3.png" class="contain" alt="圖片說明3" />
+                            <span>司法智識庫</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_4.png" class="contain" alt="圖片說明4" />
+                            <span>事實型量刑資訊系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明5" />
+                            <span>第五項</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明6" />
+                            <span>第六項假如字很多很多很多很多</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="cover" alt="圖片說明7" />
+                            <span>第七項</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 跑馬燈 -->
+                <div class="marquee">
+                  <div class="swiperBox">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="javascript:;">1因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">2因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">3因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">4因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- swiper 往上-->
+                    <button class="marquee-arrow prevSlider"></button>
+                    <!-- swiper 往下-->
+                    <button class="marquee-arrow nextSlider"></button>
+                  </div>
+                </div>
+                <!-- 路徑 -->
+                <nav aria-label="麵包屑" class="breadcrumb">
+                  <ul>
+                    <li>路徑：</li>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li aria-current="page">節點</li>
+                  </ul>
+                </nav>
+                <!-- 公佈欄 -->
+                <section class="lp">
+                  <h3 class="listTitle">lp標題</h3>
+                  <!-- 條件搜尋 -->
+                  <button class="btn_filter">條件查詢</button>
+                  <section class="filterBox">
+                    <form action="">
+                      <div class="formGrid flexForm">
+                        <div class="formGrp">
+                          <div class="formTitle">標題：</div>
+                          <div class="formContent">
+                            <input type="text" id="" value="" title="請輸入標題" />
+                          </div>
+                        </div>
+                        <div class="formGrp">
+                          <div class="formTitle">內文：</div>
+                          <div class="formContent">
+                            <input type="text" id="" value="" title="請輸入標題" />
+                          </div>
+                        </div>
+                        <div class="formGrp">
+                          <div class="formTitle">起始日期：</div>
+                          <div class="formContent">
+                            <div class="datePick">
+                              <input name="" type="date" value="" class="calendar" placeholder="開始日期" title="請選擇開始日期">
+                            </div>
+                            <div class="datePick">
+                              <input name="" type="date" value="" class="calendar" placeholder="結束日期" title="請選擇結束日期">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="formGrp">
+                          <label for="selectSample" class="formTitle">發佈單位：</label>
+                          <div class="formContent">
+                            <select id="selectSample" name="">
+                              <option value="">單位1</option>
+                              <option value="">單位2</option>
+                              <option value="">單位3</option>
+                              <option value="">單位4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="btnGrp formInline">
+                          <input name="" type="reset" value="清除" class="btn btnReset" title="清除" />
+                          <input name="Search" type="submit" value="查詢" class="btn btnSubmit" title="查詢" />
+                        </div>
+                      </div>
+                    </form>
+                  </section>
+                  <!-- category -->
+                  <div class="category">
+                    <ul>
+                      <li><a href="#">標籤1</a></li>
+                      <li><a href="#">標籤2</a></li>
+                      <li><a href="#">標籤3</a></li>
+                      <li><a href="#">標籤4</a></li>
+                      <li><a href="#">標籤5</a></li>
+                      <li><a href="#">標籤6</a></li>
+                      <li><a href="#">標籤7</a></li>
+                      <li><a href="#">標籤8</a></li>
+                      <li><a href="#">標籤9</a></li>
+                      <li><a href="#">標籤10</a></li>
+                    </ul>
+                  </div>
+                  <div class="tableList">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">項次</th>
+                          <th scope="col">類別</th>
+                          <th scope="col">標題</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="num">01</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">通勤搭車看預報 環保集點10倍送</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">02</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">春節不無聊上網學習環境教育</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">03</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">洗錢防制，國家向前</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">04</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">春節送禮認標章 環保減碳又健康</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">05</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">環保替代役歲末新春送溫暖</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">06</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">向非法化學物質說不 安全蛋品 吃得健康</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">07</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">春節期間廚餘回收真惜福 狗年來富又來福</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">08</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">春節長假看Chem Life，增長知識又可抽獎</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">09</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">金狗年春節旅遊好去處，環保署報你知</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="num">10</td>
+                          <td class="sort">期刊論文索引</td>
+                          <td>
+                            <a href="#">清新空氣保健康 神明歡喜過好年</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+                <!-- Pagination -->
+                <div class="pagination">
+                  <form action="">
+                    <div class="formInline">
+                      <div class="total">
+                        共<span>308</span>筆資料，第<span>1/18</span>頁，<label for="pet-select">每頁顯示</label>
+                        <select name="" id="pet-select" aria-label="每頁顯示">
+                          <option value="">10</option>
+                          <option value="">20</option>
+                          <option value="">30</option>
+                          <option value="">40</option>
+                        </select>
+                        筆 <input type="button" value="確定" class="btn btnSubmit" title="確定" />
+                      </div>
+                    </div>
+                  </form>
+                  <!-- <ul class="page">
+                    <li class="first">
+                      <a href="#" title="第一頁">第一頁 </a>
+                    </li>
+                    <li class="prev">
+                      <a href="#" title="回上一頁">回上一頁 </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next">
+                      <a href="#" title="下一頁">下一頁 </a>
+                    </li>
+                    <li class="last">
+                      <a href="#" title="最後一頁">最後一頁 </a>
+                    </li>
+                  </ul> -->
+                </div>
+              </section>
+            </div>
+            <div class="col _rightSide">
+              <ul class="links">
+                <li><a href="#"><img src="images/icon_links_1.svg" alt="">重要法規異動</a></li>
+                <li><a href="#"><img src="images/icon_links_2.svg" alt="">最新主管法規</a></li>
+                <li><a href="#"><img src="images/icon_links_3.svg" alt="">Google司法新聞</a></li>
+                <li><a href="#"><img src="images/icon_links_4.svg" alt="">法官人事專區</a></li>
+                <li><a href="#"><img src="images/icon_links_5.svg" alt="">問卷調查</a></li>
+              </ul>
+              <div class="lists">
+                <div class="title"><img src="images/icon_lists_1.svg" alt="">最新法官論壇</div>
+                <ul>
+                  <li><a href="#">Re: 越來越難看的法院前科紀錄表 (無法相信前科表的小法官)</a></li>
+                  <li><a href="#">Re: 終止借名登記後一定要法院判才能辦理登記嗎 (涼涼)</a></li>
+                  <li><a href="#">Re: 請讓書記官獲得應有的加班補休 (無償加班也不是每個法院都有的)</a></li>
+                  <li><a href="#">請讓書記官獲得應有的加班補休 (rickdom)</a></li>
+                  <li><a href="#">Re: 請考慮給書記官增加專業加給 (年輕人)</a></li>
+                </ul>
+                <div class="btnGrp _aLeft">
+                  <a href="#" class="btnMore">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <div class="footerInfo">
+            <ul class="footerLink">
+              <li><a href="javascript:;">司法院內網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+              <li><a href="javascript:;">司法院外網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+            </ul>
+            <p class="Copyright">法官資訊服務平台  版權所有   未經允許請勿轉載<br>網站相關問題請與所屬法院資訊處室聯繫</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- main js-->
+    <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

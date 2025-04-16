@@ -1,0 +1,23 @@
+.breadcrumb {
+  padding: 0.1em 0em 0.1em;
+  font-size: 0.813em;
+  margin: 0px auto 5px;
+  ul {
+    @include liReset;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      margin: 0 .1em .1em 0;
+    }
+    li + li {
+      & + li {
+        &:before {
+          @extend %slash;
+        }
+      }
+    }
+  }
+  a {
+    @include aSetting($colorWord);
+  }
+}
