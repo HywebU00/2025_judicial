@@ -44,7 +44,17 @@ window.addEventListener('load', () => {
 
 // 自行加入的JS請寫在這裡
 (function () {
-  
+  // menu
+  // 沒有 .hasChild 的 li > a 點擊時加上 .now，其它移除
+  document.querySelectorAll('.mainMenu li:not(.hasChild) > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      document.querySelectorAll('.mainMenu li > a.now').forEach(el => {
+        el.classList.remove('now');
+      });
+      e.currentTarget.classList.add('now');
+    });
+  });
+
   // 字級開關 .fontSize
   // 點擊 font-size-label 切換 .act 和 ul.show
   const fontSizeButton = document.querySelector('.font-size-label');
