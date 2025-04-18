@@ -4058,6 +4058,22 @@ img {
   }
   .header .navigation .navList li {
     flex: 0 0 auto;
+    position: relative;
+    padding-left: 12px;
+  }
+  .header .navigation .navList li:before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: calc(50% - 1px);
+    width: 20px;
+    height: 2px;
+    border-top: 1px solid #fff;
+    transform: rotate(-30deg);
+    opacity: 0.5;
+  }
+  .header .navigation .navList li:first-child::before {
+    display: none;
   }
   .header .navigation .navList li a {
     display: block;
@@ -4065,6 +4081,9 @@ img {
     text-decoration: none;
     color: #fff;
     font-weight: normal;
+  }
+  .header .navigation .navList li a:hover, .header .navigation .navList li a:focus-visible {
+    color: #FFF16F;
   }
   .header .navigation .submenuBox {
     display: flex;
