@@ -7129,15 +7129,6 @@ img {
   .sitemap .accessKeyDefine li {
     margin-bottom: 0.2em;
   }
-  .cascading {
-    border-top: 1px solid #ccc;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    box-sizing: border-box;
-  }
   .cascading ul {
     margin: 0;
     padding: 0;
@@ -7155,7 +7146,7 @@ img {
   .cascading li a {
     margin: 0.2em 0;
     color: #222;
-    padding: 0.5em;
+    padding: 0.5em 0.65em;
     display: block;
     font-size: 1.25em;
     font-weight: bold;
@@ -7166,7 +7157,7 @@ img {
     text-decoration: none;
   }
   .cascading li ul {
-    padding-left: 1em;
+    padding: 4px 0 4px 0.75em;
   }
   .cascading li ul li {
     width: 100%;
@@ -7182,9 +7173,11 @@ img {
     background-color: transparent;
     font-weight: normal;
   }
+  .cascading li ul li:last-child a {
+    border-bottom-color: transparent;
+  }
   @media screen and (max-width: 767px) {
     .cascading {
-      width: 95%;
       margin: 0px auto;
     }
     .cascading li {

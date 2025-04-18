@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sitemap</title>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <button class="sidebarCtrlBtn" type="button" aria-expanded="false" aria-controls="mobileArea">側欄選單</button>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <h1>
+            <a href="index.html"><img src="images/logo.svg" alt="網站標題" /></a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="頁首功能列">
+            <!-- 新增div navList -->
+            <div class="navList">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">單一登入窗口</a></li>
+                <li><a href="#">差勤系統</a></li>
+                <li><a href="#">司法院内網</a></li>
+                <li><a href="#">司法院外網</a></li>
+              </ul>
+            </div>
+            <!-- fontSize -->
+            <div class="fontSize">
+              <button class="font-size-label" type="button" name="字型大小"><span>A</span>A</button>
+              <ul aria-labelledby="font-size-label">
+                <li><button type="button" class="smallSize">小</button></li>
+                <li><button type="button" class="mediumSize">中</button></li>
+                <li><button type="button" class="largeSize">大</button></li>
+              </ul>
+            </div>
+            <!-- userName -->
+            <div class="userName">
+              <button class="user-label" type="button">使用者名稱</button>
+              <ul>
+                <li><a href="#">登出</a></li>
+                <li><a href="#">按鈕1</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- navigation End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <main id="center" class="main innerPage">
+        <!-- 內頁新增一個classname-->
+        <a class="accessKeyItem" href="#aC" id="ac" accesskey="C" aria-label="主要內容區">:::</a>
+        <div class="container">
+          <div class="flexible">
+            <div class="col">
+              <!-- 選單 -->
+              <nav class="menu mainMenu" role="navigation" aria-label="主選單">
+                <ul>
+                  <li><a href="http://www.google.com">1 第一層有連結</a></li>
+                  <li>
+                    <a href="#">2 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字很多字</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">3 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">4 第一層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單 haschild</a>
+                        <ul>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                          <li><a href="#">第三層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <!-- 主要內容區 -->
+              <section class="stage">
+                <!-- swiper -->
+                <!-- <div class="linkSlider">
+                  <div class="swiperBox">
+                    <button type="button" class="prevSlider swiperArrow"></button>
+                    <button type="button" class="nextSlider swiperArrow"></button>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明1" />
+                            <span>審判系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_2.png" class="contain" alt="圖片說明2" />
+                            <span>法學資訊檢索系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_3.png" class="contain" alt="圖片說明3" />
+                            <span>司法智識庫</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_4.png" class="contain" alt="圖片說明4" />
+                            <span>事實型量刑資訊系統</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明5" />
+                            <span>第五項</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="contain" alt="圖片說明6" />
+                            <span>第六項假如字很多很多很多很多</span>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#">
+                            <img src="images/icon_linkSlider_1.svg" class="cover" alt="圖片說明7" />
+                            <span>第七項</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- 跑馬燈 -->
+                <!-- <div class="marquee">
+                  <div class="swiperBox">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="javascript:;">1因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">2因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">3因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="javascript:;">4因尼莎颱風來襲，7/31下午2時之我國化學物質管理政策綱領第一次跨部會研商會取消。</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="marquee-arrow prevSlider"></button>
+                    <button class="marquee-arrow nextSlider"></button>
+                  </div>
+                </div> -->
+                <!-- 路徑 -->
+                <nav aria-label="麵包屑" class="breadcrumb">
+                  <ul>
+                    <li>路徑：</li>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li aria-current="page">節點</li>
+                  </ul>
+                </nav>
+                <!--  -->
+                <h3 class="listTitle">網站導覽</h3>
+                <section class="sitemap">
+                  
+                  <div class="cascading">
+                    <ul>
+                      <li>
+                        <a href="#">認識我們</a>
+                        <ul>
+                          <li><a href="#">認識秘書處</a></li>
+                          <li><a href="#">首長介紹</a></li>
+                          <li><a href="#">組織架構</a></li>
+                          <li><a href="#">業務職掌</a></li>
+                          <li><a href="#">服務電話</a></li>
+                          <li><a href="#">成果展示</a></li>
+                          <li><a href="#">特色綠建築</a></li>
+                          <li><a href="#">合署辦公大樓介紹</a></li>
+                          <li><a href="#">意見信箱</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">最新訊息</a>
+                        <ul>
+                          <li><a href="#">市政新聞</a></li>
+                          <li><a href="#">國際交流消息</a></li>
+                          <li><a href="#">消費者保護訊息</a></li>
+                          <li><a href="#">徵才訊息</a></li>
+                          <li><a href="#">工友事求人</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">申辦服務</a>
+                        <ul>
+                          <li><a href="#">會議室及活動場地申請查詢</a></li>
+                          <li><a href="#">檔案應用服務申請</a></li>
+                          <li><a href="#">喜慶中堂申請</a></li>
+                          <li><a href="#">市府公報電子報訂閱</a></li>
+                          <li><a href="#">申辦表單下載</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">主題專區</a>
+                        <ul>
+                          <li><a href="#">國際交流</a></li>
+                          <li><a href="#">消費者保護資訊</a></li>
+                          <li><a href="#">績優員工故事專題</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">資訊公開</a>
+                        <ul>
+                          <li><a href="#">重大政策</a></li>
+                          <li><a href="#">市府公報</a></li>
+                          <li><a href="#">法規專區</a></li>
+                          <li><a href="#">遊說法資訊專區</a></li>
+                          <li><a href="#">統計資料專區</a></li>
+                          <li><a href="#">性別齊步走</a></li>
+                          <li><a href="#">政風園地</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">認識我們</a>
+                        <ul>
+                          <li><a href="#">認識秘書處</a></li>
+                          <li><a href="#">首長介紹</a></li>
+                          <li><a href="#">組織架構</a></li>
+                          <li><a href="#">業務職掌</a></li>
+                          <li><a href="#">服務電話</a></li>
+                          <li><a href="#">成果展示</a></li>
+                          <li><a href="#">特色綠建築</a></li>
+                          <li><a href="#">合署辦公大樓介紹</a></li>
+                          <li><a href="#">意見信箱</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <!-- <div class="col _rightSide">
+              <ul class="links">
+                <li><a href="#"><img src="images/icon_links_1.svg" alt="">重要法規異動</a></li>
+                <li><a href="#"><img src="images/icon_links_2.svg" alt="">最新主管法規</a></li>
+                <li><a href="#"><img src="images/icon_links_3.svg" alt="">Google司法新聞</a></li>
+                <li><a href="#"><img src="images/icon_links_4.svg" alt="">法官人事專區</a></li>
+                <li><a href="#"><img src="images/icon_links_5.svg" alt="">問卷調查</a></li>
+              </ul>
+              <div class="lists">
+                <div class="title"><img src="images/icon_lists_1.svg" alt="">最新法官論壇</div>
+                <ul>
+                  <li><a href="#">Re: 越來越難看的法院前科紀錄表 (無法相信前科表的小法官)</a></li>
+                  <li><a href="#">Re: 終止借名登記後一定要法院判才能辦理登記嗎 (涼涼)</a></li>
+                  <li><a href="#">Re: 請讓書記官獲得應有的加班補休 (無償加班也不是每個法院都有的)</a></li>
+                  <li><a href="#">請讓書記官獲得應有的加班補休 (rickdom)</a></li>
+                  <li><a href="#">Re: 請考慮給書記官增加專業加給 (年輕人)</a></li>
+                </ul>
+                <div class="btnGrp _aLeft">
+                  <a href="#" class="btnMore">More</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </main>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <div class="footerInfo">
+            <ul class="footerLink">
+              <li><a href="javascript:;">司法院內網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+              <li><a href="javascript:;">司法院外網</a></li>
+              <li><a href="javascript:;">各法院內網</a></li>
+            </ul>
+            <p class="Copyright">法官資訊服務平台  版權所有   未經允許請勿轉載<br>網站相關問題請與所屬法院資訊處室聯繫</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- main js-->
+    <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

@@ -30,9 +30,8 @@
 }
 
 .cascading {
-  border-top: 1px solid #ccc;
-  @include gutter;
-  box-sizing: border-box;
+  // @include gutter;
+  // box-sizing: border-box;
 
   ul {
     @include liReset;
@@ -50,7 +49,7 @@
     a {
       margin: 0.2em 0;
       color: #222;
-      padding: 0.5em;
+      padding: 0.5em .65em;
       display: block;
       font-size: 1.25em;
       font-weight: bold;
@@ -64,7 +63,8 @@
     }
 
     ul {
-      padding-left: 1em;
+      // padding-left: 10px;
+      padding: 4px 0 4px .75em;
 
       li {
         width: 100%;
@@ -80,12 +80,35 @@
           background-color: transparent;
           font-weight: normal;
         }
+        &:last-child a{
+          border-bottom-color: transparent;
+        }
       }
     }
   }
 
+  // > ul{
+  //   // 第一層
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   gap: 6px;
+  //   li{
+  //     flex: 1 1 24%;
+  //     max-width: 24%;
+  //     ul{
+  //       // 第二層
+  //       display: flex;
+  //       flex-wrap: wrap;
+  //       li{
+  //         flex: 1 1 100%;
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
+
   @include screen('mobile') {
-    width: 95%;
+    // width: 95%;
     margin: 0px auto;
 
     li {
